@@ -11,24 +11,15 @@ But feel free to fork the repo to use it for your own experiments!
 the company logo included in the assets. It is just my appreciation for working at such a great
 place!
 
-<!--
-  Learn more about how to write a theme:
-  https://sli.dev/guide/write-theme.html
---->
-
-<!--
-  run `npm run dev` to check out the slides for more details of how to start writing a theme
--->
-
-<!--
-  Put some screenshots here to demonstrate your theme
-
-  Live demo: [...]
--->
+![Intro with QR Code](demo/0.png)
+![Code Blocks](demo/3.png)
+![Word Cloud](demo/6.png)
+![VCard](demo/7.png)
 
 ## Install
 
-Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme automatically.
+Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme
+automatically.
 
 <pre><code>---
 theme: <b>enolive</b>
@@ -40,7 +31,8 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 
 This theme provides the following layouts:
 
-- **fancy-intro**: just like intro, but with a cool image background on the right that can be handled with the image prop
+- **fancy-intro**: just like intro, but with a cool image background on the right that can be handled with the image
+  prop
 - **intro**
 - **fact**
 - **cover**
@@ -50,7 +42,7 @@ This theme provides the following layouts:
 This theme provides the following components:
 
 - **qr-code**: allows you to generate a qr-code, for example to a website or your social media profile on the fly
-- **v-card**: lists your github/gitlab urls in the top right corner
+- **v-card**: lists your GitHub/GitLab urls in the top right corner
 - **word-cloud**: a simple word cloud
 
 ## Contributing
