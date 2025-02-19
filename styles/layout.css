@@ -1,0 +1,125 @@
+:root {
+  /* default theme color */
+  --slidev-theme-background: rgb(18, 18, 18);
+  /* main colors */
+  --slidev-theme-primary: #22F4AE;
+  --slidev-theme-primary-darker: #007286;
+  --slidev-theme-secondary: #47D9CB;
+  --slidev-theme-secondary-darker: #00798e;
+  --slidev-theme-language-badge: #a3ece5;
+  /* word cloud colors */
+  /* want to modify number of colors? Then see also .components/WordCloud.vue */
+  --word-cloud-1: var(--slidev-theme-primary);
+  --word-cloud-2: var(--slidev-theme-secondary);
+  --word-cloud-3: #00C9EC;
+  --word-cloud-4: var(--slidev-theme-primary-darker);
+  --word-cloud-5: var(--slidev-theme-secondary-darker);
+  --word-cloud-6: #F7EA2D;
+  --word-cloud-7: #c5bb24;
+}
+
+/* include a company logo in the right bottom corner */
+.slidev-layout {
+  background-image: url(../assets/company-logo.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+  background-size: 12rem;
+  background-color: var(--slidev-theme-background);
+}
+
+/* style links */
+a {
+  @apply text-[--slidev-theme-primary] border-dashed;
+}
+
+a:hover {
+  @apply text-[--slidev-theme-secondary-darker];
+}
+
+/* style cover and intro slides */
+.slidev-layout.cover,
+.slidev-layout.intro,
+.slidev-layout.fancy-intro {
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}
+
+/* heading size for intro and cover */
+.slidev-layout.intro,
+.slidev-layout.cover {
+  h1 {
+    @apply text-6xl leading-20;
+  }
+}
+
+/* heading size for fancy intro */
+.slidev-layout.fancy-intro {
+  h1 {
+    @apply text-4xl leading-10;
+  }
+}
+
+/* style fact layout */
+.slidev-layout.fact {
+  h1 {
+    @apply text-6xl;
+  }
+}
+
+/* 
+  fix weird styling of two-cols-header layouts that makes the heading way too large in height 
+*/
+.slidev-layout.two-cols-header {
+  grid-template-rows: auto 1fr auto !important;
+}
+
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+/* make headings animated with a slight pulsating effect */
+h1, h2, h3, h4, h5, h6 {
+  background: linear-gradient(to right, var(--slidev-theme-primary), var(--slidev-theme-secondary), var(--slidev-theme-secondary-darker));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease infinite;
+  background-size: 400% 100%;
+}
+
+/* Fade Effect for animated elements such as lists */
+.fade {
+  .slidev-vclick-target {
+    transition: all 500ms ease;
+  }
+
+  .slidev-vclick-hidden {
+    transform: none;
+  }
+
+  .slidev-vclick-prior {
+    @apply !opacity-40;
+  }
+}
+
+/* make footnotes less intrusive */
+.footnotes-sep {
+  @apply opacity-15 w-3/4 mt-10;
+}
+
+.footnote-backref {
+  display: none;
+}
