@@ -1,11 +1,15 @@
 {
   "name": "slidev-theme-enolive",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "keywords": [
     "slidev-theme",
     "slidev"
   ],
+  "repository": {
+    "type": "github",
+    "url": "git+https://github.com/enolive/slidev-theme-enolive.git"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
