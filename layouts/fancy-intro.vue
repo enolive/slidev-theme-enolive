@@ -6,9 +6,15 @@ const props = defineProps<{ image: string }>()
 
 const imageStyle = reactive({
   color: 'white',
-  'background-image': `url(${props.image})`,
+  'background-image': `url(${resolveAssetUrl(props.image)})`,
   'background-position': 'center center',
 })
+
+function resolveAssetUrl(url: string) {
+  if (url.startsWith('/'))
+    return import.meta.env.BASE_URL + url.slice(1)
+  return url
+}
 </script>
 
 <template>
