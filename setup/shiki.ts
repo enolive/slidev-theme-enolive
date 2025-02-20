@@ -26,6 +26,7 @@ export default defineShikiSetup((): ShikiSetupReturn => {
           const languagePrefix = 'language-'
           if (!languageProperty.startsWith(languagePrefix)) {
             console.warn('the found class does not represent a language', languageProperty);
+            return node
           }
 
           const language = languageProperty.replace(languagePrefix, '')
