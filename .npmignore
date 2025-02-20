@@ -2,3 +2,5 @@
 .vscode
 demo/
 dist/
+*.pdf
+*.tgz
