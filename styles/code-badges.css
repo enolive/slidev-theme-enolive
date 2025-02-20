@@ -1,9 +1,9 @@
-.slidev-code-wrapper > pre > .lang {
-    @apply pos-absolute top-0 right-0 z-2 p-2 text-[12px] font-500 select-none !text-[--slidev-theme-language-badge] opacity-30;
-    transition: color .4s,opacity .4s;
+.language-badge {
+  @apply pos-absolute top-0 right-0 z-2 p-2 text-[12px] font-500 select-none !text-[--slidev-theme-language-badge] opacity-30;
+  transition: color .4s, opacity .4s;
 }
 
 /* make sure the copy button is always above the language badge and better visible! */
 .slidev-code-copy {
-    @apply !z-3;
+  @apply !z-3;
 }

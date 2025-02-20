@@ -39,7 +39,7 @@ export default defineShikiSetup((): ShikiSetupReturn => {
             type: 'element',
             tagName: 'span',
             properties: {
-              'class': 'lang'
+              'class': 'language-badge'
             },
             children: [languageTag]
           }
