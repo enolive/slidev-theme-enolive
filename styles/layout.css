@@ -69,7 +69,7 @@ a:hover {
 /* style fact layout */
 .slidev-layout.fact {
   h1 {
-    @apply text-6xl;
+    @apply text-6xl line-height-relaxed;
   }
 }
 
@@ -91,13 +91,29 @@ a:hover {
 }
 
 /* make headings animated with a slight pulsating effect */
+.cover,
+.fancy-intro,
+.intro,
+.fact { 
+  h1, h2, h3, h4, h5, h6 {
+    background: linear-gradient(to right, var(--slidev-theme-primary), var(--slidev-theme-secondary), var(--slidev-theme-secondary-darker));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease infinite;
+    background-size: 400% 100%;
+  }
+}
+
+/* less distractive headings for normal slides */
 h1, h2, h3, h4, h5, h6 {
-  background: linear-gradient(to right, var(--slidev-theme-primary), var(--slidev-theme-secondary), var(--slidev-theme-secondary-darker));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow_animation 6s ease infinite;
-  background-size: 400% 100%;
+  color: var(--slidev-theme-secondary);
+}
+
+/* horizontal gap on two-cols layouts */
+.two-cols, 
+.two-cols-header {
+  @apply gap-x-4;
 }
 
 /* Fade Effect for animated elements such as lists */
