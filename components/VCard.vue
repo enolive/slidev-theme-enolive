@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ githubUrl?: string, gitlabUrl?: string }>()
+defineProps<{ githubUrl?: string, gitlabUrl?: string, bluesky?: string }>()
 </script>
 
 <template>
@@ -9,6 +9,9 @@ defineProps<{ githubUrl?: string, gitlabUrl?: string }>()
     </a>
     <a v-if="gitlabUrl" :href="gitlabUrl" target="_blank" title="GitLab" class="icon">
       <mdi-gitlab/>
+    </a>
+    <a v-if="bluesky" :href="`https://bsky.app/profile/${bluesky}`" target="_blank" title="BlueSky" class="icon">
+      <bi-bluesky/>
     </a>
   </div>
 </template>

@@ -145,4 +145,4 @@ layout: cover
 
 # V-Card with Repo Links
 
-<v-card github-url="test" gitlab-url="test2"/>
+<v-card github-url="test" gitlab-url="test2" bluesky="test3"/>

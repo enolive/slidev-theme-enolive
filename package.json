@@ -1,6 +1,6 @@
 {
   "name": "slidev-theme-enolive",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "type": "module",
   "keywords": [
     "slidev-theme",
@@ -20,6 +20,7 @@
     "screenshot": "slidev export example.md --format png"
   },
   "dependencies": {
+    "@iconify-json/bi": "^1.2.6",
     "@iconify-json/mdi": "^1.2.3",
     "@slidev/types": "^51.1.0",
     "qrcode.vue": "^3.6.0"
